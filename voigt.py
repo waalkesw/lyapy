@@ -1072,6 +1072,7 @@ def voigt(a, u):
     True
     """
     a = float(a)
+    a = np.minimum(a,0.1)
     if not 0 <= a <= 0.1:
         raise ValueError('a must satisfy 0 <= a <= 0.1 (%f)' % a)
     u = np.abs(u)
